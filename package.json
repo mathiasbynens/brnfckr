@@ -1,0 +1,49 @@
+{
+	"name": "brnfckr",
+	"version": "0.1.0",
+	"description": "A brainfuck minifier written in JavaScript",
+	"homepage": "http://mths.be/brnfckr",
+	"main": "brnfckr.js",
+	"bin": "bin/brnfckr",
+	"keywords": [
+		"brainfuck",
+		"minify",
+		"minifier"
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://mths.be/mit"
+		},
+		{
+			"type": "GPL",
+			"url": "http://mths.be/gpl"
+		}
+	],
+	"author": {
+		"name": "Mathias Bynens",
+		"web": "http://mathiasbynens.be/"
+	},
+	"bugs": {
+		"url": "https://github.com/mathiasbynens/brnfckr/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mathiasbynens/brnfckr.git"
+	},
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"test": "node tests/tests.js"
+	},
+	"devDependencies": {
+		"istanbul": "~0.1.32",
+		"grunt": "~0.4.1",
+		"grunt-shell": "~0.2.1",
+		"qunitjs": "~1.11.0",
+		"qunit-clib": "~1.3.0",
+		"requirejs": "~2.1.5"
+	},
+	"readmeFilename": "README.md"
+}

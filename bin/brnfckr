@@ -1,0 +1,90 @@
+#!/usr/bin/env node
+(function() {
+
+	var fs = require('fs');
+	var brnfckr = require('../brnfckr.js');
+	var minify = brnfckr.minify;
+	var snippets = process.argv.splice(2);
+	var option = snippets.shift();
+	var isFile = false;
+	var stdin = process.stdin;
+	var data;
+	var log = console.log;
+	var main = function() {
+
+		if (/^(?:-h|--help|undefined)$/.test(option)) {
+			log('brnfckr v%s - http://mths.be/brnfckr', brnfckr.version);
+			log('\nUsage:\n');
+			log('\tbrnfckr [-c | --code] [snippet ...]');
+			log('\tbrnfckr [-f | --file] [file ...]');
+			log('\tbrnfckr [-v | --version]');
+			log('\tbrnfckr [-h | --help]');
+			log('\nExamples:\n');
+			log('\tbrnfckr -c \'.+[.+] prints out all ASCII characters\'');
+			log('\tbrnfckr -f foo.b');
+			log('\techo \',[>,]<[.<] reverses its input\' | brnfckr -c');
+			return process.exit(1);
+		}
+
+		if (/^(?:-v|--version)$/.test(option)) {
+			log('v%s', brnfckr.version);
+			return process.exit(1);
+		}
+
+		if (/^(?:-f|--file)$/.test(option)) {
+			isFile = true;
+		} else if (!/^(?:-c|--code)$/.test(option)) {
+			log('Unrecognized option `%s`.', option);
+			log('Try `brnfckr --help` for more information.');
+			return process.exit(1);
+		}
+
+		if (!snippets.length) {
+			log('Error: option `%s` requires an argument.', option);
+			log('Try `brnfckr --help` for more information.');
+			return process.exit(1);
+		}
+
+		snippets.forEach(function(snippet) {
+			var result;
+			if (isFile) {
+				try {
+					snippet = fs.readFileSync(snippet, 'utf-8');
+				} catch(error) {
+					log('Error: no such file. (`%s`)', snippet);
+					return process.exit(1);
+				}
+			}
+			try {
+				result = minify(snippet);
+				log(result);
+			} catch(error) {
+				log('Error: failed to minify.');
+				log('If you think this is a bug in brnfckr, please report it:');
+				log('https://github.com/mathiasbynens/brnfckr/issues/new')
+				return process.exit(1);
+			}
+		});
+		// Return with exit status 0 outside of the `forEach` loop, in case
+		// multiple snippets or files were passed in.
+		return process.exit(0);
+
+	};
+
+	if (stdin.isTTY) {
+		// handle shell arguments
+		main();
+	} else {
+		// handle pipe
+		data = '';
+		stdin.on('data', function(chunk) {
+			data += chunk;
+		});
+		stdin.on('end', function() {
+			snippets.unshift(data.trim());
+			main();
+		});
+		stdin.resume();
+	}
+
+}());
