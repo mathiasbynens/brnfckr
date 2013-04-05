@@ -78,7 +78,7 @@ brnfckr has been tested in at least Chrome 27, Firefox 3-19, Safari 4-6, Opera 1
 
 ## Unit tests & code coverage
 
-After cloning this repository, run `npm install --dev` to install the dependencies needed for brnfckr development and testing. You may want to install Istanbul _globally_ using `npm install istanbul -g`.
+After cloning this repository, run `npm install` to install the dependencies needed for brnfckr development and testing. You may want to install Istanbul _globally_ using `npm install istanbul -g`.
 
 Once that’s done, you can run the unit tests in Node using `npm test` or `node tests/tests.js`. To run the tests in Rhino, Ringo, Narwhal, and web browsers as well, use `grunt test`.
 

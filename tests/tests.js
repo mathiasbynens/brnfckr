@@ -44,7 +44,6 @@
 				'description': 'brainfuck minifier in brainfuck',
 				'original': '>>>,\n[\n[->+>+<<]             copy input\n\n<<<+++++++++++++      fill cell with 13 for subtraction\n[->+>+>+<<<]          and duplicate some times\n\n>>>[->---<]           sub 39\n>----                 43\n\n[                     plus\n-\n[                     comma\n-\n[                     minus\n-\n[                     dot\n\n<<[->>-<<]>>-         60\n\n[                     less than\n--\n[                     greater than\n\n<<<[->>>--<<<]>>>     86\n---                   91\n\n[                     open square bracket\n--\n[                     closing square bracket\n\n>[-]                  remove copy\n\n]]]]]]]]\n\n>[.[-]>]              the copy has not been removed; print\n\n<<[-]<<<[-]>[-]>      clean up\n\n,]',
 				'minified': '>>>,[[->+>+<<]<<<+++++++++++++[->+>+>+<<<]>>>[->---<]>----[-[-[-[<<[->>-<<]>>-[--[<<<[->>>--<<<]>>>---[--[>[-]]]]]]]]]>[.[-]>]<<[-]<<<[-]>[-]>,]'
-
 			}
 		],
 
