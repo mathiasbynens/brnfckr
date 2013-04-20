@@ -1,4 +1,5 @@
-(function(root) {
+/*! http://mths.be/brnfckr v0.1.1 by @mathias */
+;(function(root) {
 
 	// Detect free variables `exports`
 	var freeExports = typeof exports == 'object' && exports;
@@ -24,7 +25,7 @@
 	/*--------------------------------------------------------------------------*/
 
 	var brnfckr = {
-		'version': '0.1.0',
+		'version': '0.1.1',
 		'minify': minify
 	};
 
