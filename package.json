@@ -5,6 +5,7 @@
 	"homepage": "http://mths.be/brnfckr",
 	"main": "brnfckr.js",
 	"bin": "bin/brnfckr",
+	"man": "man/brnfckr.1",
 	"keywords": [
 		"brainfuck",
 		"minify",
