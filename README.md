@@ -1,5 +1,7 @@
 # brnfckr, a brainfuck minifier written in JavaScript
 
+[![Build status](https://travis-ci.org/mathiasbynens/brnfckr.png?branch=master)](https://travis-ci.org/mathiasbynens/brnfckr) [![Dependency status](https://gemnasium.com/mathiasbynens/brnfckr.png)](https://gemnasium.com/mathiasbynens/brnfckr)
+
 For an online demo, see [mothereff.in/brainfuck-minifier](http://mothereff.in/brainfuck-minifier).
 
 Feel free to fork if you see possible improvements!
