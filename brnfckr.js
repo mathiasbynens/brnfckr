@@ -16,7 +16,7 @@
 
 	/*--------------------------------------------------------------------------*/
 
-	var regexNotBrainfuck = /[^\+\-<>\[\],\.]/g;
+	var regexNotBrainfuck = /[^\x2B-\x2E\x3C\x3E\x5B\x5D]/g;
 
 	var minify = function(code) {
 		return code.replace(regexNotBrainfuck, '');
