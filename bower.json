@@ -1,0 +1,15 @@
+{
+	"name": "brnfckr",
+	"version": "0.1.1",
+	"main": "brnfckr.js",
+	"ignore": [
+		"bin",
+		"coverage",
+		"man",
+		"tests",
+		".*",
+		"Gruntfile.js",
+		"package.json",
+		"node_modules"
+	]
+}
