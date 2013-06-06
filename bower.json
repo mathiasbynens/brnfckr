@@ -8,8 +8,9 @@
 		"man",
 		"tests",
 		".*",
+		"component.json",
 		"Gruntfile.js",
-		"package.json",
-		"node_modules"
+		"node_modules",
+		"package.json"
 	]
 }

@@ -1,0 +1,15 @@
+{
+	"name": "brnfckr",
+	"version": "0.1.1",
+	"description": "A brainfuck minifier written in JavaScript.",
+	"repo": "mathiasbynens/brnfckr",
+	"license": "MIT/GPL",
+	"scripts": [
+		"brnfckr.js"
+	],
+	"keywords": [
+		"brainfuck",
+		"minify",
+		"minifier"
+	]
+}
