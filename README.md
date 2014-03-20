@@ -1,6 +1,6 @@
 # brnfckr, a brainfuck minifier written in JavaScript
 
-[![Build status](https://travis-ci.org/mathiasbynens/brnfckr.png?branch=master)](https://travis-ci.org/mathiasbynens/brnfckr) [![Dependency status](https://gemnasium.com/mathiasbynens/brnfckr.png)](https://gemnasium.com/mathiasbynens/brnfckr)
+[![Build status](https://travis-ci.org/mathiasbynens/brnfckr.svg?branch=master)](https://travis-ci.org/mathiasbynens/brnfckr) [![Dependency status](https://gemnasium.com/mathiasbynens/brnfckr.svg)](https://gemnasium.com/mathiasbynens/brnfckr)
 
 For an online demo, see [mothereff.in/brainfuck-minifier](http://mothereff.in/brainfuck-minifier).
 
@@ -100,9 +100,10 @@ To generate [the code coverage report](http://rawgithub.com/mathiasbynens/brnfck
 
 ## Author
 
-[Mathias Bynens](http://mathiasbynens.be/)
-  [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter")
+| [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
+|---|
+| [Mathias Bynens](http://mathiasbynens.be/) |
 
 ## License
 
-brnfckr is dual licensed under the [MIT](http://mths.be/mit) and [GPL](http://mths.be/gpl) licenses.
+brnfckr is available under the [MIT](http://mths.be/mit) license.
