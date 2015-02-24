@@ -2,7 +2,7 @@
 	"name": "brnfckr",
 	"version": "0.1.1",
 	"description": "A brainfuck minifier written in JavaScript",
-	"homepage": "http://mths.be/brnfckr",
+	"homepage": "https://mths.be/brnfckr",
 	"main": "brnfckr.js",
 	"bin": "bin/brnfckr",
 	"man": "man/brnfckr.1",
@@ -14,20 +14,18 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "http://mths.be/mit"
+			"url": "https://mths.be/mit"
 		},
 		{
 			"type": "GPL",
-			"url": "http://mths.be/gpl"
+			"url": "https://mths.be/gpl"
 		}
 	],
 	"author": {
 		"name": "Mathias Bynens",
-		"url": "http://mathiasbynens.be/"
+		"url": "https://mathiasbynens.be/"
 	},
-	"bugs": {
-		"url": "https://github.com/mathiasbynens/brnfckr/issues"
-	},
+	"bugs": "https://github.com/mathiasbynens/brnfckr/issues",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mathiasbynens/brnfckr.git"

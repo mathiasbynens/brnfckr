@@ -2,13 +2,13 @@
 
 [![Build status](https://travis-ci.org/mathiasbynens/brnfckr.svg?branch=master)](https://travis-ci.org/mathiasbynens/brnfckr) [![Dependency status](https://gemnasium.com/mathiasbynens/brnfckr.svg)](https://gemnasium.com/mathiasbynens/brnfckr)
 
-For an online demo, see [mothereff.in/brainfuck-minifier](http://mothereff.in/brainfuck-minifier).
+For an online demo, see [mothereff.in/brainfuck-minifier](https://mothereff.in/brainfuck-minifier).
 
 Feel free to fork if you see possible improvements!
 
 ## Installation and usage
 
-Via [npm](http://npmjs.org/):
+Via [npm](https://www.npmjs.com/):
 
 ```bash
 npm install brnfckr
@@ -32,7 +32,7 @@ In a browser:
 <script src="brnfckr.js"></script>
 ```
 
-In [Narwhal](http://narwhaljs.org/), [Node.js](http://nodejs.org/), and [RingoJS](http://ringojs.org/):
+In [Narwhal](http://narwhaljs.org/), [Node.js](https://nodejs.org/), and [RingoJS](http://ringojs.org/):
 
 ```js
 var brnfckr = require('brnfckr');
@@ -102,8 +102,8 @@ To generate [the code coverage report](http://rawgithub.com/mathiasbynens/brnfck
 
 | [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
-| [Mathias Bynens](http://mathiasbynens.be/) |
+| [Mathias Bynens](https://mathiasbynens.be/) |
 
 ## License
 
-brnfckr is available under the [MIT](http://mths.be/mit) license.
+brnfckr is available under the [MIT](https://mths.be/mit) license.

@@ -13,7 +13,7 @@
 	var main = function() {
 
 		if (/^(?:-h|--help|undefined)$/.test(option)) {
-			log('brnfckr v%s - http://mths.be/brnfckr', brnfckr.version);
+			log('brnfckr v%s - https://mths.be/brnfckr', brnfckr.version);
 			log('\nUsage:\n');
 			log('\tbrnfckr [-c | --code] [snippet ...]');
 			log('\tbrnfckr [-f | --file] [file ...]');

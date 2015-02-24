@@ -1,4 +1,4 @@
-/*! http://mths.be/brnfckr v0.1.1 by @mathias */
+/*! https://mths.be/brnfckr v0.1.1 by @mathias */
 ;(function(root) {
 
 	// Detect free variables `exports`
