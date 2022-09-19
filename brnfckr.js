@@ -17,9 +17,16 @@
 	/*--------------------------------------------------------------------------*/
 
 	var regexNotBrainfuck = /[^\x2B-\x2E\x3C\x3E\x5B\x5D]/g;
+	// exploit arithmetic mod 256
+	var regexUint8Wrap = /\+{256}|-{256}/g;
 
 	var minify = function(code) {
-		return code.replace(regexNotBrainfuck, '');
+		code = code
+			.replace(regexNotBrainfuck, '')
+			// valid for modular wrap-around, invalid if clamping
+			.replace(regexUint8Wrap, '');
+		//to-do: implement +- and >< cancellation
+		return code;
 	};
 
 	/*--------------------------------------------------------------------------*/
