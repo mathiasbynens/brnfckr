@@ -18,8 +18,8 @@
 
 	var regexNotBrainfuck = /[^\x2B-\x2E\x3C\x3E\x5B\x5D]/g;
 	// exploit arithmetic mod 256 (byte wrap-around)
-	var regexUint8Wrap = /\+{256}|-{256}/g;
-	var regexNoOp = /(+-)|(-+)|(><)|(<>)/g;
+	var regexUint8Wrap = /\x2B{256}|-{256}/g;
+	var regexNoOp = /(\x2B-)|(-\x2B)|(\x3E\x3C)|(\x3C\x3E)/g;
 
 	var minify = function(code) {
 		code = code
