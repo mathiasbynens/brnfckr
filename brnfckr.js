@@ -26,7 +26,7 @@
 			.replace(regexNotBrainfuck, '')
 			.replace(regexUint8Wrap, '');
 
-		//this is slow, but it's a temporary "patch"
+		// this is O(n^2), but it's a temporary "patch"
 		do {
 			var len = code.length;
 			code = code.replace(regexNoOp, '');
