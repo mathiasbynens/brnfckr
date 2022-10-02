@@ -1,5 +1,6 @@
 /*! https://mths.be/brnfckr v0.1.1 by @mathias */
 ;(function(root) {
+	'use strict';
 
 	// Detect free variables `exports`
 	var freeExports = typeof exports == 'object' && exports;
@@ -10,23 +11,28 @@
 
 	// Detect free variable `global` and use it as `root`
 	var freeGlobal = typeof global == 'object' && global;
-	if (freeGlobal.global === freeGlobal) {
+	if (freeGlobal.global === freeGlobal)
 		root = freeGlobal;
-	}
 
 	/*--------------------------------------------------------------------------*/
 
 	var regexNotBrainfuck = /[^\x2B-\x2E\x3C\x3E\x5B\x5D]/g;
-	// exploit arithmetic mod 256
+	// exploit arithmetic mod 256 (byte wrap-around)
 	var regexUint8Wrap = /\+{256}|-{256}/g;
+	var regexNoOp = /(+-)|(-+)|(><)|(<>)/g;
 
 	var minify = function(code) {
 		code = code
 			.replace(regexNotBrainfuck, '')
-			// valid for modular wrap-around, invalid if clamping
 			.replace(regexUint8Wrap, '');
-		//to-do: implement +- and >< cancellation
-		return code;
+
+		//this is slow, but it's a temporary "patch"
+		do {
+			var len = code.length;
+			code = code.replace(regexNoOp, '');
+		} while (len != code.length)
+
+		return code
 	};
 
 	/*--------------------------------------------------------------------------*/
@@ -46,13 +52,13 @@
 		define(function() {
 			return brnfckr;
 		});
-	}	else if (freeExports && !freeExports.nodeType) {
+	} else if (freeExports && !freeExports.nodeType) {
 		if (freeModule) { // in Node.js or RingoJS v0.8.0+
 			freeModule.exports = brnfckr;
 		} else { // in Narwhal or RingoJS v0.7.0-
-			for (var key in brnfckr) {
-				brnfckr.hasOwnProperty(key) && (freeExports[key] = brnfckr[key]);
-			}
+			for (var key in brnfckr)
+				if (brnfckr.hasOwnProperty(key))
+					freeExports[key] = brnfckr[key];
 		}
 	} else { // in Rhino or a web browser
 		root.brnfckr = brnfckr;
