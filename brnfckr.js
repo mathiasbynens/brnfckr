@@ -21,7 +21,7 @@
 	var regexUint8Wrap = /\x2B{256}|-{256}/g;
 	var regexMutualCancel = /(\x2B-)|(-\x2B)|(\x3E\x3C)|(\x3C\x3E)/g;
 
-	var minify = function(code) {
+	var minify = function(/**@type {string}*/code) {
 		code = code
 			.replace(regexNotBF, '')
 			.replace(regexUint8Wrap, '');
