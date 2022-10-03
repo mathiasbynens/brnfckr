@@ -32,7 +32,7 @@
 			code = code.replace(regexMutualCancel, '');
 		} while (len != code.length)
 
-		return code
+		return code;
 	};
 
 	/*--------------------------------------------------------------------------*/
@@ -44,14 +44,12 @@
 
 	// Some AMD build optimizers, like r.js, check for specific condition patterns
 	// like the following:
-	if (
+	var isAMD =
 		typeof define == 'function' &&
 		typeof define.amd == 'object' &&
-		define.amd
-	) {
-		define(function() {
-			return brnfckr;
-		});
+		define.amd;
+	if (isAMD) {
+		define(function() { return brnfckr });
 	} else if (freeExports && !freeExports.nodeType) {
 		if (freeModule) { // in Node.js or RingoJS v0.8.0+
 			freeModule.exports = brnfckr;
